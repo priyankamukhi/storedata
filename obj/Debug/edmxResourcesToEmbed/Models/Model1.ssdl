@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="storeid" />
+    </Key>
+    <Property Name="storeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storename" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeownername" Type="nvarchar" MaxLength="50" />
+    <Property Name="storelocation" Type="int" />
+    <Property Name="storecontactno" Type="int" />
+    <Property Name="storeloaction" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="dbModelStoreContainer">
+    <EntitySet Name="store" EntityType="Self.store" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

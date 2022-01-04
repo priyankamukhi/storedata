@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="storeid" />
+    </Key>
+    <Property Name="storeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="storename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeownername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storelocation" Type="Int32" />
+    <Property Name="storecontactno" Type="Int32" />
+    <Property Name="storeloaction" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dbEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="stores" EntityType="Self.store" />
+  </EntityContainer>
+</Schema>
